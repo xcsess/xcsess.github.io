@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificate Verification</title>
+</head>
+<body>
+  <h1 id="output">CID: Not Found</h1>
+  
+  <script>
+    // Function to get query parameter by name
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+
+    // Get the 'cid' parameter
+    const cid = getQueryParam('cid');
+
+    // Display it in the h1 tag
+    if (cid) {
+      document.getElementById('output').textContent = `CID: ${cid}`;
+    }
+  </script>
+</body>
+</html>
